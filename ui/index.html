@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MineCraft Launcher</title>
+  <link rel="stylesheet" href="app.css" />
+</head>
+<body>
+  <div id="fit">
+    <div id="stage" class="stage">
+      <img class="bg" src="assets/bg.jpg" alt="" draggable="false" data-tauri-drag-region />
+      <button id="close" class="close" type="button" aria-label="关闭">×</button>
+      <div class="footer" data-tauri-drag-region>MineCraft Launcher by 忘却的旋律</div>
+
+      <button id="launch" class="mcbtn launch" type="button">启动游戏</button>
+      <button id="update" class="mcbtn side up" type="button">更新游戏</button>
+      <button id="settings" class="mcbtn side set" type="button">设置</button>
+      <button id="verbtn" class="mcbtn combo" type="button">
+        <span id="verlabel">未安装</span>
+        <i class="caret"></i>
+      </button>
+      <button id="opendir" class="linkish" type="button">打开目录</button>
+      <div id="verlist" class="verlist hidden"></div>
+
+      <div id="mask" class="mask hidden"></div>
+      <div id="layer"></div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
