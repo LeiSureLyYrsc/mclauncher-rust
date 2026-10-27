@@ -3,7 +3,7 @@
 use mclauncher_core::{
     default_paths, delete_version as delete_ver, discover_javas, ensure_authlib, http_client, install_version,
     installed_ids, list_versions, load_config, offline_account, prepare_launch, rename_version as rename_ver,
-    save_config, spawn_launch, yggdrasil_login, yggdrasil_refresh, AccountKind, Config, Progress, Report, Source,
+    save_config, spawn_launch, yggdrasil_login, yggdrasil_refresh, AccountKind, Config, Http, Progress, Report, Source,
 };
 use serde::Deserialize;
 use serde_json::{json, Value};
@@ -14,7 +14,7 @@ use tauri::{AppHandle, Emitter, State};
 use tokio::sync::Mutex;
 
 struct Core {
-    http: reqwest::Client,
+    http: Http,
     config_path: PathBuf,
     config: Config,
     cancel: Arc<AtomicBool>,

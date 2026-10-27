@@ -9,6 +9,7 @@ use std::sync::Arc;
 use std::time::{Duration, Instant};
 use tokio::io::AsyncWriteExt;
 
+pub type Http = reqwest::Client;
 pub type Report = Arc<dyn Fn(&Progress) + Send + Sync>;
 
 pub fn http_client() -> McResult<reqwest::Client> {
